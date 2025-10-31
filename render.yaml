@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: page-analyzer
+    env: python
+    plan: free
+    branch: main
+    buildCommand: make build
+    startCommand: make render-start
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
